@@ -26,7 +26,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # gem 'rack-cors'
 
 # using this in our gemfile (might want to use version < 6.3 of Rails)
-
+gem 'devise_token_auth', '~> 1.2'
 gem 'rest-client', '~> 2.1'
 
 group :development, :test do
