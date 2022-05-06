@@ -2,7 +2,9 @@
 ## Tracking and Management Application
 
 [FCF Application Trello Board](https://trello.com/b/ZTW4NWlN/fcf-application)
+
 [FCF Application Database Design](https://lucid.app/lucidchart/4740ecb0-4950-427f-bec1-e1bf802aa386/edit?beaconFlowId=A91577D85DEBDF47&invitationId=inv_7b96c416-9f50-4151-bf5a-244f36f8e6af&page=0_0#)
+
 [FCF Application](https://www.figma.com/file/XzhvCIL0PjnghFP7faPs3W/FCF-Wireframes?node-id=0%3A1)
 
 ## Application Pieces Needed
@@ -50,8 +52,12 @@
 ## Arrangement Tool (Back End Tracking)
 ### Requirements
 - Home Page
+    |
     <details>
     <summary>Flowers</summary>
+        |Type|
+        |Name|
+        |Picture|
         - Type
         - Name
         - Picture
