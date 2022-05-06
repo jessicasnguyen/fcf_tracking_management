@@ -19,6 +19,7 @@
 - Faker
 - Pry
 - Better Errors
+- Rest Client
 
 ### React Packages Installed
 - Axios
