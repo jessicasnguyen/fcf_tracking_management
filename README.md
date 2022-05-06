@@ -2,7 +2,9 @@
 ## Tracking and Management Application
 
 [FCF Application Trello Board](https://trello.com/b/ZTW4NWlN/fcf-application)
+
 [FCF Application Database Design](https://lucid.app/lucidchart/4740ecb0-4950-427f-bec1-e1bf802aa386/edit?beaconFlowId=A91577D85DEBDF47&invitationId=inv_7b96c416-9f50-4151-bf5a-244f36f8e6af&page=0_0#)
+
 [FCF Application](https://www.figma.com/file/XzhvCIL0PjnghFP7faPs3W/FCF-Wireframes?node-id=0%3A1)
 
 ## Application Pieces Needed
@@ -52,71 +54,37 @@
 - Home Page
     <details>
     <summary>Flowers</summary>
-        - Type
-        - Name
-        - Picture
-        - Wholesale Price
-        - Retail Price (Calculated from Wholesale Price)
-        - Quantity
+        Type, Name, Picture, Wholesale Price, Retail Price (Calculated from Wholesale Price), Quantity
     </details>
     
     <details>
     <summary>Vases</summary>
-        - Type
-        - Size
-        - Picture
-        - Wholesale Price
-        - Retail Price (Calculated from Wholesale Price)
-        - Quantity
+        Type, Size, Picture, Wholesale Price, Retail Price (Calculated from Wholesale Price), Quantity
     </details>
 
     <details>
     <summary>Baskets</summary>
-        - Type
-        - Size
-        - Picture
-        - Wholesale Price
-        - Retail Price (Calculated from Wholesale Price)
-        - Quantity
+        Type, Size, Picture, Wholesale Price, Retail Price (Calculated from Wholesale Price), Quantity
     </details>
 
     <details>
     <summary>Add Ons</summary>
-        - Type
-        - Name
-        - Picture
-        - Supplier
-        - Wholesale Price
-        - Retail Price (Calculated from Wholesale Price)
+        Type, Name, Picture, Supplier, Wholesale Price, Retail Price (Calculated from Wholesale Price)
     </details>
 
     <details>
     <summary>Wraps</summary>
-        - Color
-        - Picture
-        - Material
-        - Wholesale Price
-        - Retail Price (Calculated from Wholesale Price)
-        - Quantity
+        Color, Picture, Material, Wholesale Price, Retail Price (Calculated from Wholesale Price), Quantity
     </details>
 
     <details>
     <summary>Ribbon</summary>
-        - Color
-        - Size
-        - Picture
-        - Quantity
+        Color, Size, Picture, Quantity
     </details>
 
     <details>
     <summary>Loss Reporting</summary>
-        - Employee Pin
-        - Item Name
-        - Description
-        - Thrown Away / Returned
-        - Supplier
-        - Invoice Number
-        - Price from Invoice / Wholesale Price from Database
+        Employee Pin, Item Name, Description, Thrown Away / Returned, Supplier, Invoice Number, Price from Invoice / Wholesale Price from Database
     </details>
 
 - Sidebar Checkout
