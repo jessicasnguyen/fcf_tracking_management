@@ -52,77 +52,39 @@
 ## Arrangement Tool (Back End Tracking)
 ### Requirements
 - Home Page
-    |
     <details>
     <summary>Flowers</summary>
-        |Type|
-        |Name|
-        |Picture|
-        - Type
-        - Name
-        - Picture
-        - Wholesale Price
-        - Retail Price (Calculated from Wholesale Price)
-        - Quantity
+        Type, Name, Picture, Wholesale Price, Retail Price (Calculated from Wholesale Price), Quantity
     </details>
     
     <details>
     <summary>Vases</summary>
-        - Type
-        - Size
-        - Picture
-        - Wholesale Price
-        - Retail Price (Calculated from Wholesale Price)
-        - Quantity
+        Type, Size, Picture, Wholesale Price, Retail Price (Calculated from Wholesale Price), Quantity
     </details>
 
     <details>
     <summary>Baskets</summary>
-        - Type
-        - Size
-        - Picture
-        - Wholesale Price
-        - Retail Price (Calculated from Wholesale Price)
-        - Quantity
+        Type, Size, Picture, Wholesale Price, Retail Price (Calculated from Wholesale Price), Quantity
     </details>
 
     <details>
     <summary>Add Ons</summary>
-        - Type
-        - Name
-        - Picture
-        - Supplier
-        - Wholesale Price
-        - Retail Price (Calculated from Wholesale Price)
+        Type, Name, Picture, Supplier, Wholesale Price, Retail Price (Calculated from Wholesale Price)
     </details>
 
     <details>
     <summary>Wraps</summary>
-        - Color
-        - Picture
-        - Material
-        - Wholesale Price
-        - Retail Price (Calculated from Wholesale Price)
-        - Quantity
+        Color, Picture, Material, Wholesale Price, Retail Price (Calculated from Wholesale Price), Quantity
     </details>
 
     <details>
     <summary>Ribbon</summary>
-        - Color
-        - Size
-        - Picture
-        - Quantity
+        Color, Size, Picture, Quantity
     </details>
 
     <details>
     <summary>Loss Reporting</summary>
-        - Employee Pin
-        - Item Name
-        - Description
-        - Thrown Away / Returned
-        - Supplier
-        - Invoice Number
-        - Price from Invoice / Wholesale Price from Database
+        Employee Pin, Item Name, Description, Thrown Away / Returned, Supplier, Invoice Number, Price from Invoice / Wholesale Price from Database
     </details>
 
 - Sidebar Checkout
