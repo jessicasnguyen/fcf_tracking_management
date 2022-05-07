@@ -24,6 +24,7 @@
 ### React Packages Installed
 - Axios
 - React Router
+- Material UI
 
 ---
 
