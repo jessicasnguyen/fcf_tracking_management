@@ -1,0 +1,2 @@
+class Vase < ApplicationRecord
+end

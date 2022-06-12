@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  color: MyString
+  picture: MyString
+  wsp: 1.5
+  material: MyString
+  qty: 1
+
+two:
+  color: MyString
+  picture: MyString
+  wsp: 1.5
+  material: MyString
+  qty: 1

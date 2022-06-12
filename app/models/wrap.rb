@@ -1,0 +1,2 @@
+class Wrap < ApplicationRecord
+end
