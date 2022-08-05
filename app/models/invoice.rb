@@ -3,7 +3,7 @@ class Invoice < ApplicationRecord
   has_many :items, dependent: :destroy
   has_many :payments, dependent: :destroy
 
-  def self.open
+  def self.open_invoices
     Invoice.find_by_sql("SELECT inv.id, cus.first_name, cus.last_name, cus.company, inv.invoice_date, inv.terms, CAST(SUM(itm.price) AS NUMERIC(18,2)) AS total, inv.paid
     FROM invoices inv
     INNER JOIN customers cus
@@ -15,7 +15,7 @@ class Invoice < ApplicationRecord
     ORDER BY inv.id ASC")
   end
 
-  def self.closed
+  def self.closed_invoices
     Invoice.find_by_sql("SELECT inv.id, cus.first_name, cus.last_name, cus.company, inv.invoice_date, inv.terms, CAST(SUM(itm.price) AS NUMERIC(18,2)) AS total, inv.paid
     FROM invoices inv
     INNER JOIN customers cus
@@ -27,7 +27,7 @@ class Invoice < ApplicationRecord
     ORDER BY inv.id ASC")
   end
 
-  def self.all
+  def self.all_invoices
     Invoice.find_by_sql("SELECT inv.id, cus.first_name, cus.last_name, cus.company, inv.invoice_date, inv.terms, CAST(SUM(itm.price) AS NUMERIC(18,2)) AS total, inv.paid
     FROM invoices inv
     INNER JOIN customers cus

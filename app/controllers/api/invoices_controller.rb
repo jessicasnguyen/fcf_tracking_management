@@ -31,12 +31,16 @@ class Api::InvoicesController < ApplicationController
         render json: @invoice.destroy
     end
 
-    def open
-        render json: Invoice.open
+    def open_invoices
+        render json: Invoice.open_invoices
     end
 
-    def closed
-        render json: Invoice.closed
+    def closed_invoices
+        render json: Invoice.closed_invoices
+    end
+
+    def all_invoices
+        render json: Invoice.all_invoices
     end
 
     private
