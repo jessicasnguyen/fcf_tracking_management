@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: one
+  terms: 1
+  invoice_date: 2022-08-05 11:51:40
+  paid: false
+  summary: MyText
+
+two:
+  customer_id: two
+  terms: 1
+  invoice_date: 2022-08-05 11:51:40
+  paid: false
+  summary: MyText

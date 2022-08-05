@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_12_173643) do
+ActiveRecord::Schema.define(version: 2022_08_05_175531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,25 @@ ActiveRecord::Schema.define(version: 2022_06_12_173643) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "customers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "company"
+    t.string "custtomer_cat"
+    t.string "phone"
+    t.string "mobile"
+    t.string "fax"
+    t.string "website"
+    t.text "street"
+    t.string "city"
+    t.string "state"
+    t.integer "zip"
+    t.string "country"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "flowers", force: :cascade do |t|
     t.string "name"
     t.string "picture"
@@ -44,6 +63,40 @@ ActiveRecord::Schema.define(version: 2022_06_12_173643) do
     t.integer "qty"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "invoices", force: :cascade do |t|
+    t.bigint "customer_id", null: false
+    t.integer "terms"
+    t.datetime "invoice_date"
+    t.boolean "paid"
+    t.text "summary"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_invoices_on_customer_id"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.bigint "invoice_id", null: false
+    t.string "name"
+    t.float "price"
+    t.integer "qty"
+    t.text "description"
+    t.datetime "service_date"
+    t.string "category"
+    t.string "floranext"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["invoice_id"], name: "index_items_on_invoice_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.bigint "invoice_id", null: false
+    t.datetime "date"
+    t.float "amount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["invoice_id"], name: "index_payments_on_invoice_id"
   end
 
   create_table "ribbons", force: :cascade do |t|
@@ -107,4 +160,7 @@ ActiveRecord::Schema.define(version: 2022_06_12_173643) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "invoices", "customers"
+  add_foreign_key "items", "invoices"
+  add_foreign_key "payments", "invoices"
 end
