@@ -5,7 +5,7 @@ class CreateCustomers < ActiveRecord::Migration[6.1]
       t.string :last_name
       t.string :email
       t.string :company
-      t.string :custtomer_cat
+      t.string :customer_cat
       t.string :phone
       t.string :mobile
       t.string :fax

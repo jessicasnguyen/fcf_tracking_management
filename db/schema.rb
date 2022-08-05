@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2022_08_05_175531) do
     t.string "last_name"
     t.string "email"
     t.string "company"
-    t.string "custtomer_cat"
+    t.string "customer_cat"
     t.string "phone"
     t.string "mobile"
     t.string "fax"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2022_08_05_175531) do
     t.datetime "invoice_date"
     t.boolean "paid"
     t.text "summary"
+    t.float "tax"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["customer_id"], name: "index_invoices_on_customer_id"

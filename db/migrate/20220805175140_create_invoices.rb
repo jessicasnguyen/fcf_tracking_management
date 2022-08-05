@@ -6,6 +6,7 @@ class CreateInvoices < ActiveRecord::Migration[6.1]
       t.datetime :invoice_date
       t.boolean :paid
       t.text :summary
+      t.float :tax
 
       t.timestamps
     end
