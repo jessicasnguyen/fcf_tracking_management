@@ -12,5 +12,7 @@ Rails.application.routes.draw do
     get '/open', to:'invoices#open_invoices'
     get '/closed', to:'invoices#closed_invoices'
     get '/invoices', to:'invoices#all_invoices'
+    
+  end
 
 end
