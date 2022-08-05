@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
+
+:root {
+
+  --blue: #29A9E0;
+  --med-blue: #11B6E4;
+  --light-blue: #9DE1FB;
+  --light: #FFFCF2;
+  --light-gray: #CCC5B9;
+  --med-gray: #413D3A;
+  --dark-gray: #2B2927;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  background-color: var(--dark-gray);
+  display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--light);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navlink {
+  color: var(--light-blue);
+  font-family: 'Palanquin';
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: large;
+}
+
+.container {
+  padding-left: 1.5rem;
+}
+
+h1 {
+  color: var(--med-gray);
+  font-family: 'Palanquin';
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--med-blue);
+  font-family: 'Palanquin';
+  font-weight: bold;
+}
+
+h4 {
+  color: var(--light);
+  margin-top: .1rem;
+  margin-bottom: .1rem;
+  font-size: medium;
+}
+
+.list-box {
+  /* background-color: var(--medium-blue); */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tab-button {
+  background-color: var(--light-blue);
+  color: var(--med-gray);
+  font-family: 'Palanquin';
+  font-weight: bold;
+  font-size: 1rem;
+  outline-color: var(--light);
+  border-radius: .5rem .5rem 0rem 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-btn {
+  background-color: var(--med-blue);
+  border-radius: 1rem;
+  margin: .3rem;
+}
+
+.header-row {
+  background-color: var(--med-gray);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-btn {
+  background-color: var(--med-blue);
+  color: var(--light);
+  font-weight: bold;
+  margin: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
 }

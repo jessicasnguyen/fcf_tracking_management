@@ -28,12 +28,20 @@ const NavBar = () => {
   // }
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between'}}>
-        <div>
-          <Link to='/'>Home</Link>
-          {/* {renderLeft()} */}
-        </div>
-        {/* <div>{renderRightNav()}</div> */}
+    <div>
+      <nav>
+        <Link className="navlink" to="/">
+          Home
+        </Link>
+        <Link className="navlink" to="/invoices">
+          Invoices
+        </Link>
+        <Link className="navlink" to="/customers">
+          Customers
+        </Link>
+        {/* {renderLeft()} */}
+      </nav>
+      {/* <div>{renderRightNav()}</div> */}
     </div>
   )
 }
