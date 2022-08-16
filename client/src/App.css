@@ -107,3 +107,29 @@ h4 {
 .tbl-link {
   color: var(--blue);
 }
+
+.cus-header {
+  display: flex;
+}
+
+.edit-btn {
+  background-color: var(--blue);
+  color: var(--light);
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1.1rem;
+  border-radius: 1.5rem;
+  padding: .5rem 1rem .5rem 1rem;
+  margin: 1.5rem 0rem 1.5rem 0rem;
+}
+
+.delete-btn {
+  background-color: darkred;
+  color: var(--light);
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1.1rem;
+  border-radius: 1.5rem;
+  padding: .5rem 1rem .5rem 1rem;
+  margin: 1.5rem 0rem 1.5rem 0rem;
+}

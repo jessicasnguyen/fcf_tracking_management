@@ -46,6 +46,7 @@ const CustomerShow = () => {
           onClick={() => {
             setShowEditForm(!showEditForm)
           }}
+          class="edit-btn"
         >
           Edit
         </button>
@@ -53,6 +54,7 @@ const CustomerShow = () => {
           onClick={() => {
             deleteCustomer(customer.id)
           }}
+          class="delete-btn"
         >
           Delete
         </button>
