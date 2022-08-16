@@ -69,7 +69,7 @@ const ClosedInvoices = () => {
               <TableCell>Service Date</TableCell>
               <TableCell>{closed.invoice_date}</TableCell>
               <TableCell>Paid Date</TableCell>
-              <TableCell>{closed.total}</TableCell>
+              <TableCell>${closed.total}</TableCell>
             </TableRow>
           ))}
         </TableBody>

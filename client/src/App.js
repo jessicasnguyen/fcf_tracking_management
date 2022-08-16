@@ -14,6 +14,7 @@ import Invoices from './invoice/pages/Invoices'
 import InvoiceForm from './invoice/forms/InvoiceForm'
 import CustomerForm from './invoice/forms/CustomerForm'
 import Customers from './invoice/pages/Customers'
+import CustomerShow from './invoice/pages/CustomerShow'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/invoices/new" element={<InvoiceForm />} />
           <Route path="/customers/new" element={<CustomerForm />} />
           <Route path="/customers/:id/edit" element={<CustomerForm />} />
+          <Route path="/customers/:id" element={<CustomerShow />} />
           <Route path="/customers" element={<Customers />} />
 
           {/* PROTECTED ROUTES */}

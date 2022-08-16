@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
 import axios from 'axios'
-import { useParams, useLocation, useNavigate } from 'react-router-dom'
+import { useParams, useLocation, useNavigate, Link } from 'react-router-dom'
 import {
   Table,
   TableBody,
@@ -16,6 +16,7 @@ import CustomerForm from '../forms/CustomerForm'
 const Customers = () => {
   const { updateCustomer, deleteCustomer } = useContext(DataContext)
   const navigate = useNavigate()
+  const location = useLocation()
   const [customers, setCustomers] = useState([])
   const [showForm, setShowForm] = useState(false)
   const [showEditForm, setShowEditForm] = useState(false)
@@ -85,7 +86,9 @@ const Customers = () => {
               {customers.map((customer) => (
                 <TableRow key={customer.id}>
                   <TableCell>
-                    {customer.first_name} {customer.last_name}
+                    <Link to={`/customers/${customer.id}`} class="tbl-link">
+                      {customer.first_name} {customer.last_name}
+                    </Link>
                   </TableCell>
                   <TableCell>{customer.company}</TableCell>
                   <TableCell>{customer.email}</TableCell>
@@ -99,22 +102,22 @@ const Customers = () => {
                   <TableCell>
                     <div className="table-btn-container">
                       {/* Need to figure out how to pass the customer ID to this field */}
-                      <button
+                      {/* <button
                         className="table-btn"
                         onClick={() => {
                           setShowEditForm(!showEditForm)
                         }}
                       >
                         Edit
-                      </button>
-                      <button
+                      </button> */}
+                      {/* <button
                         className="table-btn"
                         onClick={() => {
                           deleteCustomer(customer.id)
                         }}
                       >
                         Delete
-                      </button>
+                      </button> */}
                     </div>
                     <div>
                       {showEditForm && (

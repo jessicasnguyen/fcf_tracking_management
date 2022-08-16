@@ -103,3 +103,7 @@ h4 {
   padding-right: 1rem;
   border-radius: 1rem;
 }
+
+.tbl-link {
+  color: var(--blue);
+}

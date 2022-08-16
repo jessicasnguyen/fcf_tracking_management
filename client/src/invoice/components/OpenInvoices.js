@@ -13,6 +13,7 @@ import {
 
 const OpenInvoices = () => {
   const [open, setOpen] = useState([])
+  // const [dueDate, setDueDate] = useState(null)
 
   const navigate = useNavigate()
   let nav = useNavigate()
@@ -29,6 +30,12 @@ const OpenInvoices = () => {
     } catch (err) {
       alert('Error in getting open invoices')
     }
+  }
+
+  function dueDate(date, terms) {
+    var res = new Date(date)
+    res.setDate(res.getDate() + terms)
+    return res
   }
 
   return (
@@ -69,8 +76,12 @@ const OpenInvoices = () => {
               <TableCell>{open.company}</TableCell>
               <TableCell>Service Date</TableCell>
               <TableCell>{open.invoice_date}</TableCell>
-              <TableCell>Due Date</TableCell>
-              <TableCell>{open.total}</TableCell>
+              <TableCell>
+                Due Date
+                {/* {dueDate(`${open.invoice_date}`, `${open.terms}`)} */}
+                {/* {open.invoice_date} + {open.terms} */}
+              </TableCell>
+              <TableCell>${open.total}</TableCell>
             </TableRow>
           ))}
         </TableBody>
