@@ -58,15 +58,15 @@ const CustomerShow = () => {
         >
           Delete
         </button>
-        <div>
-          {showEditForm && (
-            <CustomerForm
-              id={customer.id}
-              updateCustomer={updateCustomer}
-              setShowEditForm={setShowEditForm}
-            />
-          )}
-        </div>
+      </div>
+      <div>
+        {showEditForm && (
+          <CustomerForm
+            id={customer.id}
+            updateCustomer={updateCustomer}
+            setShowEditForm={setShowEditForm}
+          />
+        )}
       </div>
       <p>Email: {customer.email}</p>
       <p>Company: {customer.company}</p>
