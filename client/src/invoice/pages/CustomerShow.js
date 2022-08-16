@@ -41,6 +41,19 @@ const CustomerShow = () => {
       <h1>
         {customer.first_name} {customer.last_name}
       </h1>
+      <p>Email: {customer.email}</p>
+      <p>Company: {customer.company}</p>
+      <p>Industry: {customer.customer_cat}</p>
+      <p>Phone: {customer.phone}</p>
+      <p>Cell Phone: {customer.mobile}</p>
+      <p>Fax: {customer.fax}</p>
+      <p>Website: {customer.website}</p>
+      <p>Address:</p>
+      <p>{customer.street}</p>
+      <p>
+        {customer.city}, {customer.state} {customer.zip}
+      </p>
+      <p>{customer.country}</p>
     </div>
   )
 }
