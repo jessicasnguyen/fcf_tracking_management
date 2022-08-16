@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 export const DataContext = React.createContext()
 
@@ -8,11 +9,14 @@ export const DataProvider = (props) => {
   const [items, setItems] = useState([])
   const [payments, setPayments] = useState([])
   const [customers, setCustomers] = useState([])
+  const [customer, setCustomer] = useState([])
+  const params = useParams()
 
   //// INVOICES ////
 
   useEffect(() => {
     getInvoices()
+    getCustomers()
     getCustomers()
   }, [])
 
@@ -146,6 +150,15 @@ export const DataProvider = (props) => {
     }
   }
 
+  const getCustomer = async () => {
+    try {
+      let res = await axios.get(`/api/customers/${params.id}`)
+      setCustomer(res.data)
+    } catch (err) {
+      alert('Error in getCustomer in Data Provider')
+    }
+  }
+
   const addCustomer = async (customer) => {
     try {
       let res = await axios.post('/api/customers', customer)
@@ -181,6 +194,7 @@ export const DataProvider = (props) => {
       value={{
         getInvoices,
         getCustomers,
+        getCustomer,
         addInvoice,
         updateInvoice,
         deleteInvoice,

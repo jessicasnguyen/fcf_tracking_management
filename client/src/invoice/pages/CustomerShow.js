@@ -38,9 +38,34 @@ const CustomerShow = () => {
 
   return (
     <div>
-      <h1>
-        {customer.first_name} {customer.last_name}
-      </h1>
+      <div class="cus-header">
+        <h1>
+          {customer.first_name} {customer.last_name}
+        </h1>
+        <button
+          onClick={() => {
+            setShowEditForm(!showEditForm)
+          }}
+        >
+          Edit
+        </button>
+        <button
+          onClick={() => {
+            deleteCustomer(customer.id)
+          }}
+        >
+          Delete
+        </button>
+        <div>
+          {showEditForm && (
+            <CustomerForm
+              id={customer.id}
+              updateCustomer={updateCustomer}
+              setShowEditForm={setShowEditForm}
+            />
+          )}
+        </div>
+      </div>
       <p>Email: {customer.email}</p>
       <p>Company: {customer.company}</p>
       <p>Industry: {customer.customer_cat}</p>
