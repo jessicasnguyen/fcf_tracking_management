@@ -77,20 +77,6 @@ ActiveRecord::Schema.define(version: 2022_08_05_175531) do
     t.index ["customer_id"], name: "index_invoices_on_customer_id"
   end
 
-  create_table "items", force: :cascade do |t|
-    t.bigint "invoice_id", null: false
-    t.string "name"
-    t.float "price"
-    t.integer "qty"
-    t.text "description"
-    t.datetime "service_date"
-    t.string "category"
-    t.string "floranext"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["invoice_id"], name: "index_items_on_invoice_id"
-  end
-
   create_table "payments", force: :cascade do |t|
     t.bigint "invoice_id", null: false
     t.datetime "date"
@@ -162,6 +148,5 @@ ActiveRecord::Schema.define(version: 2022_08_05_175531) do
   end
 
   add_foreign_key "invoices", "customers"
-  add_foreign_key "items", "invoices"
   add_foreign_key "payments", "invoices"
 end

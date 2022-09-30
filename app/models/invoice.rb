@@ -1,6 +1,6 @@
 class Invoice < ApplicationRecord
   belongs_to :customer
-  has_many :items, dependent: :destroy
+  # has_many :line_items, dependent: :destroy
   has_many :payments, dependent: :destroy
 
   def self.open_invoices

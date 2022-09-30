@@ -60,17 +60,17 @@ end
 
 ########## ITEMS ##########
 
-50.times do
-    itm = Item.create(
-        invoice_id: Faker::Number.between(from: 1, to: 15),
-        name: Faker::Commerce.product_name,
-        price: Faker::Commerce.price,
-        qty: Faker::Number.non_zero_digit,
-        description: Faker::Lorem.sentence,
-        service_date: Faker::Date.in_date_period,
-        category: Faker::Commerce.department,
-    )
-end
+# 50.times do
+#     itm = Item.create(
+#         invoice_id: Faker::Number.between(from: 1, to: 15),
+#         name: Faker::Commerce.product_name,
+#         price: Faker::Commerce.price,
+#         qty: Faker::Number.non_zero_digit,
+#         description: Faker::Lorem.sentence,
+#         service_date: Faker::Date.in_date_period,
+#         category: Faker::Commerce.department,
+#     )
+# end
 
 ########## PAYMENTS ##########
 
@@ -87,5 +87,5 @@ end
 puts "Flowers: #{Flower.all.length}"
 puts "Customers: #{Customer.all.length}"
 puts "Invoices: #{Invoice.all.length}"
-puts "Items: #{Item.all.length}"
+# puts "Items: #{Item.all.length}"
 puts "Payments: #{Payment.all.length}"
